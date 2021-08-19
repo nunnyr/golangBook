@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //functions can take parameters in this order: name type, name type etc
 // func average(xs []float64) float64 {
 // 	total := 0.0
@@ -83,7 +81,19 @@ import "fmt"
 
 func main() {
 
-	fmt.Println(half(50))
+	// fmt.Println(half(120))
+	// fmt.Println(greatestNum(10, 20, 24, 5))
+	// nextOdd := makeOddGenerator()
+	// fmt.Println(nextOdd())
+	// fmt.Println(nextOdd())
+	// fmt.Println(nextOdd())
+	// fmt.Println(nextOdd())
+	// fmt.Println(nextOdd())
+	// x := 1.5
+	// square(&x)
+
+	// fmt.Println(x)
+
 }
 
 func half(num int) (int, bool) {
@@ -98,4 +108,57 @@ func half(num int) (int, bool) {
 
 	return final, result
 
+}
+
+func greatestNum(num ...int) int {
+	// final := 0
+	var final int
+	for _, v := range num {
+		if v > final {
+			final = v
+		}
+	}
+	return final
+}
+
+func makeOddGenerator() func() uint {
+	i := uint(1)
+	return func() (ret uint) {
+		ret = i
+		i += 2
+		return
+	}
+}
+
+func square(x *float64) {
+	*x = *x * *x
+
+}
+
+/*
+what are defer, panic, and recover?
+-defer is a special statement that schedules a function call to be run after the function completes.
+-panic will immediately stop the execution of the function. and you have to pair it with defer.
+
+-panic generally indicates a programmer error or an exceptional condition that there's no easy way to recover from (hence the word panic)
+-recover stops the panic and returns the value that was passed to the call to panic.
+
+
+how do you get the memory address of a variable?
+-we use the & operator to find the address of a variable
+-an asterisk is used to dereference pointer variables. derefencing a pointer gives us accesss to the value the pointer points to.
+
+how do you assign a value to a pointer?
+-define a pointer variable like *x = 5
+-using the & you can access the value
+
+
+how do you create a new pointer?
+-new takes a type as an argument, allocates enough memory to fit a value of that type, and returns a pointer to it.
+- new function:x = new(int)
+
+*/
+
+func swap(x, y *int) {
+	*x, *y = *y, *x
 }
