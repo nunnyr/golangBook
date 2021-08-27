@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //functions can take parameters in this order: name type, name type etc
 // func average(xs []float64) float64 {
 // 	total := 0.0
@@ -81,7 +83,7 @@ package main
 
 func main() {
 
-	// fmt.Println(half(120))
+	fmt.Println(half(120))
 	// fmt.Println(greatestNum(10, 20, 24, 5))
 	// nextOdd := makeOddGenerator()
 	// fmt.Println(nextOdd())
@@ -91,8 +93,6 @@ func main() {
 	// fmt.Println(nextOdd())
 	// x := 1.5
 	// square(&x)
-
-	// fmt.Println(x)
 
 }
 
