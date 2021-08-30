@@ -43,12 +43,9 @@ what is the difference between a method and a function?
 -a method is a function that has a defined receiver.
 -the receiver is like a parameter - it has a name and a type - but by creating the function in this way, it allos us to call the function
 	using the . operator
+
+why would you use embedded anonymous fields instead of a normal named field?
+
+
+
 */
-package main
-
-import ("fmt"; "math")
-
-func distance(x1, y1, x2, y2 float64) float64 {
-	
-
-}
