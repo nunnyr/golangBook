@@ -33,9 +33,6 @@ we can also use the new function...... c := new(Circle)
 -this allocates memory for all the fields, set each of them ot their zero value, and returns a pointer to the struct (*Circle). Pointers are often used with structs so that functions can modifiy their contents.
 -using new in this way is somewhat uncommon. more typically, we want to give each of the fields an initial value. we can do this in two ways.
 
-
-
-
 */
 
 /*
