@@ -21,9 +21,22 @@ what does package main mean
 - package main
 - a package can have many related files inside of it
 - there are 2 different types of packages: we have an executable
-	type which generates a file that we can run. reusable: code used as 'helpers'
+type which generates a file that we can run. reusable: code used as 'helpers'
 
 
-	what does 'import "fmt" ' mean
+what does 'import "fmt" ' mean
+-fmt is short for format and is a library. it is used to print out information to the terminal
+
+what is func?
+-func is short for function,
+
+how are the files organized?
+-at the very top we are having our package declaration.
+-underneath that you will list the other imports that you need or create custom packages
+-after you get to the body of the file. this is where your logic lives.
+-
+
+
+
 
 */
