@@ -2,8 +2,14 @@ package main
 
 func main() {
 	cards := newDeck()
-	cards.print()
-	// fmt.Println(cards)
+	// cards.print()
+	//deal(cards, 5)
+	// cards.deal()
+	// fmt.Println(cool)
+	//initializing two variables with the invocation of
+	hand, remainingCards := deal(cards, 5)
+	hand.print()
+	remainingCards.print()
 }
 
 /*

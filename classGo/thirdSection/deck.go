@@ -7,8 +7,8 @@ type deck []string
 //create and return a list of playing cards. essentially an array of strings.
 func newDeck() deck {
 	cards := deck{}
-	cardSuits := []string{"Spades", "Hearts", "Diamonds"}
-	cardValues := []string{"Ace", "Two", "Three"}
+	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
@@ -27,6 +27,16 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+//there are arguments inside of the function call
+//we expect to call this deal function with an existing list of cards
+//which we refer to "d deck"
+//we are calling it d because its convention
+//we are returning two values so we are returning type deck twice
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
 
 //any variable of type deck now gets access to the "deck" method.
