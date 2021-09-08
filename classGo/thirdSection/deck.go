@@ -4,6 +4,34 @@ import "fmt"
 
 type deck []string
 
+func newDeck() deck {
+	cards := deck{}
+	cardSuits := []string{"Spades", "Hearts", "Diamonds"}
+	cardValues := []string{"Ace", "Two", "Three"}
+
+	for _, suit := range cardSuits {
+		for _, value := range cardValues {
+
+			cards = append(cards, value+" of "+suit)
+
+		}
+	}
+
+	return cards
+
+}
+
+func (d deck) print() {
+	for i, card := range d {
+		fmt.Println(i, card)
+	}
+}
+
+//any variable of type deck now gets access to the "deck" method.
+//receivers set up methods on variables that we can create
+//the variable d is a reference to the working variable or the instance of the deck
+//d is like this or self insisde any other language.
+
 //the actual copy of the deck we're working with is
 //available in the function as a variable called 'd'
 
@@ -24,21 +52,3 @@ type deck []string
 // for each suit in cardSuits
 // 	for each value in cardValues
 //add a new card of 'value of suit' to the 'cards' deck.
-
-
-cardSuits := []string{"Spades", "Hearts", "Diamonds"}
-cardValyes := []string{"Ace", "Two", "Three"}
-func newDeck() deck {
-	cards := deck{}
-}
-
-func (d deck) print() {
-	for i, card := range d {
-		fmt.Println(i, card)
-	}
-}
-
-//any variable of type deck now gets access to the "deck" method.
-//receivers set up methods on variables that we can create
-//the variable d is a reference to the working variable or the instance of the deck
-//d is like this or self insisde any other language.
