@@ -1,12 +1,18 @@
 package main
 
-import "fmt"
-
 func main() {
-	cards := deck{"Ace of Diamonds", newCard()}
+	cards := newDeck()
 	cards.print()
-	fmt.Println(cards)
+	// fmt.Println(cards)
 }
+
+/*
+cards is initialized with invoking the newDeck function
+
+
+
+
+*/
 
 //var card string = "Ace of Spaces"
 //^^this is a very explicit way to write this out

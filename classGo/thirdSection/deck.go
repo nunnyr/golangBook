@@ -4,6 +4,7 @@ import "fmt"
 
 type deck []string
 
+//create and return a list of playing cards. essentially an array of strings.
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Spades", "Hearts", "Diamonds"}
@@ -21,6 +22,7 @@ func newDeck() deck {
 
 }
 
+//logs out the contents of a deck of cards
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
